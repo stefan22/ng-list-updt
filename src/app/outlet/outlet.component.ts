@@ -1,17 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'outlet',
-  template: `<div>
-    <br/><br/>
-    <h2>{{outletHTML}}</h2>
-    <br/>
-  </div>`,
-  styles: ['div { border: 1px dashed; padding: 25px; text-align: center;}']
+  selector: "app-outlet",
+  templateUrl: "./outlet.component.html",
+  styleUrls: ["./outlet.component.css"]
 })
-export class OutletComponent {
+export class OutletComponent implements OnInit {
+  outletHTML = 'home page';
 
-  outletHTML = '<router-outlet></router-outlet>';
-  constructor() {
-  }
+  constructor() {}
+
+  ngOnInit() {}
 }
