@@ -11,6 +11,7 @@ export class NavComponent implements OnInit {
   color: string = '#9d9d9d';
 
   ngOnInit() {
+    this.url = true;
   }
 
   
@@ -20,9 +21,7 @@ export class NavComponent implements OnInit {
     this.tar = e.target.textContent.trim();
     if (this.tar !== 'Home') {
       this.url = false;
-    } else {
-      this.url = true;
-    }
+    } 
 
   }
 

@@ -1,0 +1,10 @@
+div { 
+  border: 2px solid; 
+  padding: 25px; 
+  border-radius: 10px; 
+  text-align: center;
+}
+
+.red {
+  color: red;
+}

@@ -12,19 +12,28 @@
         Ng6</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul (click)="onClickNavItem($event,navContainer)" #navContainer class="nav navbar-nav">
+      <ul 
+        (click)="onClickNavItem($event,navContainer)" 
+        #navContainer class="nav navbar-nav">
         <li [class.active]="url">
-          <a routerLink="">Home</a>
+          <a routerLink="./" 
+          routerLinkActive="active">Home</a>
         </li>
         <li>
-          <a routerLink="register">Register</a>
+          <a routerLink="./register" 
+          routerLinkActive="active">Register</a>
         </li>
         <li>
-          <a routerLink="login">Login</a>
+          <a 
+          routerLink="./login" 
+          routerLinkActive="active">Login</a>
         </li>
         <li>
-          <a routerLink="password-reset">Password reset</a>
+          <a 
+          routerLink="./password-reset" 
+          routerLinkActive="active">Password reset</a>
         </li>
+       
 
       </ul>
     </div>
