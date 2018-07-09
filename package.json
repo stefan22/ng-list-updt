@@ -1,0 +1,37 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "ng serve",
+    "build": "ng build",
+    "lint": "ng lint"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^4.4.7",
+    "@angular/common": "^4.4.7",
+    "@angular/compiler": "^4.4.7",
+    "@angular/core": "^4.4.7",
+    "@angular/forms": "^4.4.7",
+    "@angular/http": "^4.4.7",
+    "@angular/platform-browser": "^4.4.7",
+    "@angular/platform-browser-dynamic": "^4.4.7",
+    "@angular/router": "^4.4.7",
+    "core-js": "^2.5.7",
+    "ol": "^5.0.2",
+    "rxjs": "^5.5.11",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "@angular/cli": "1.4.1",
+    "@angular/compiler-cli": "^4.4.7",
+    "@angular/language-service": "^4.4.7",
+    "@types/node": "^6.0.114",
+    "codelyzer": "~3.1.1",
+    "karma-chrome-launcher": "~2.1.1",
+    "ts-node": "~3.2.0",
+    "tslint": "~5.3.2",
+    "typescript": "~2.3.3"
+  }
+}
