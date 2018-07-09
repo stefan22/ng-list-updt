@@ -14,16 +14,16 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul (click)="onClickNavItem($event,navContainer)" #navContainer class="nav navbar-nav">
         <li [class.active]="url">
-          <a ng-href="./">Home</a>
+          <a routerLink="">Home</a>
         </li>
         <li>
-          <a ng-href="./list1">List 1</a>
+          <a routerLink="register">Register</a>
         </li>
         <li>
-          <a ng-href="./login">Login</a>
+          <a routerLink="login">Login</a>
         </li>
         <li>
-          <a ng-href="./reset-password">Reset Password</a>
+          <a routerLink="password-reset">Password reset</a>
         </li>
 
       </ul>

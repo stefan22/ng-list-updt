@@ -12,15 +12,15 @@ import { NotFoundComponent } from './404/404.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: OutletComponent
   },
   {
-    path: "login",
+    path: 'login',
     component: LoginComponent
   },
   {
-    path: "password-reset",
+    path: 'password-reset',
     component: PasswordResetComponent
   }
 ];
