@@ -13,7 +13,7 @@ export class ProductsService {
 
   constructor(private http: HttpClient) { 
 
-  }
+  }// const
 
 
   productDetailed(id: string) {
@@ -22,7 +22,8 @@ export class ProductsService {
         return this.products[i];
       }
     }
-  }
+  
+  }// productDetailed 
 
 
   getProducts() {
@@ -31,20 +32,17 @@ export class ProductsService {
     this.http.get(url)
       .subscribe((response) => {
           this.products = response;
-          // console.log(typeof this.products);
           let item = {},
               prop;
           for(prop in this.products) {
             item = this.products[prop];
-            // console.log(item);
             this.allProds.push(item);
           }
-      
       });
-      console.log('allProds: ', this.allProds);
-      return this.allProds;
+    console.log('allProds: ', this.allProds);
+    return this.allProds;
       
-  }
+  }// getProducts
 
   
 

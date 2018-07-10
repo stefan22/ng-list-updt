@@ -2,23 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService} from '../products.service';
 
 
-
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  selector: "app-products",
+  templateUrl: "./products.component.html",
+  styleUrls: ["./products.component.css"]
 })
+
 export class ProductsComponent implements OnInit {
   allProducts: any;
   ishidden: boolean = true;
-  
-  constructor(private productsService: ProductsService) {
 
-  }
+  constructor(private productsService: ProductsService) {}
 
   ngOnInit() {
-      this.allProducts = this.productsService.getProducts();
-      console.log('allProducts: ', this.allProducts);
+    this.allProducts = this.productsService.getProducts();
+    console.log("allProducts: ", this.allProducts);
+  }
+
+  onProductName(e) {
+    alert(e.target.textContent) ;
   }
 
   // show(id) {
@@ -28,4 +30,5 @@ export class ProductsComponent implements OnInit {
   //   }])
   // }
 
-}
+
+}// ProductsComponent class

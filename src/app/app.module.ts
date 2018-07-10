@@ -6,12 +6,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavComponent } from "./nav/nav.component";
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { OutletComponent } from './outlet/outlet.component';
+import { RegisterComponent } from "./register/register.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
 import { PasswordResetComponent } from './password-reset/password-reset.component';
-import { NotFoundComponent } from './404/404.component';
-import { RegisterComponent } from './register/register.component';
 
 import { LandingComponent } from './landing/landing.component';
+import { NotFoundComponent } from "./404/404.component";
+
 import { ProductsComponent } from './products/products.component';
 import { DetailsComponent } from './details/details.component';
 
@@ -27,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: OutletComponent
+    component: DashboardComponent
   },
   {
     path: 'login',
@@ -66,7 +67,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    OutletComponent,
+    DashboardComponent,
     NavComponent,
     LoginComponent,
     PasswordResetComponent,
