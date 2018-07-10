@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-xs-12">
+      <h1>All Products</h1>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <!-- First product-->
+      <div class="prod-info-main clearfix">
+        <div class="row">
+          <div class="product-item clearfix"
+             *ngFor="let product of allProducts">
+            
+            <div class="col-md-5 col-sm-12 col-xs-12">
+              <div class="product-image">
+                <img src="#" class="img-responsive">
+            
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-12 col-xs-12">
+              <div class="product-title">
+                <p>{{product.image_title}}</p>
+                <p>{{product.name}}</p>
+              </div>
+            </div>
+          </div>
+          <!-- product-item -->
+        </div>
+      </div>
+      <!-- end product -->
+    </div>
+
+    <!-- details -->
+    <div class="col-xs-12 col-md-5 col-md-offset-1">
+      <div class="details">
+        <h2>Details</h2>
+      
+      </div>
+    </div>
+  </div><!-- endof row -->
+</div>
