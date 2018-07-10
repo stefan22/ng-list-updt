@@ -10,6 +10,8 @@ import { ProductsService} from '../products.service';
 })
 export class ProductsComponent implements OnInit {
   allProducts: any;
+  ishidden: boolean = true;
+  
   constructor(private productsService: ProductsService) {
 
   }

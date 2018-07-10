@@ -7,18 +7,18 @@
       <!-- First product-->
       <div class="prod-info-main clearfix">
         <div class="row">
-          <div class="product-item clearfix"
+          <div class="product-item"
              *ngFor="let product of allProducts">
             
-            <div class="col-md-5 col-sm-12 col-xs-12">
+            <div class="col-md-5 col-sm-12 col-xs-12" 
+              [class.ishidden]="ishidden">
               <div class="product-image">
                 <img src="#" class="img-responsive">
             
               </div>
             </div>
             <div class="col-md-5 col-sm-12 col-xs-12">
-              <div class="product-title">
-                <p>{{product.image_title}}</p>
+              <div class="product-name">
                 <p>{{product.name}}</p>
               </div>
             </div>

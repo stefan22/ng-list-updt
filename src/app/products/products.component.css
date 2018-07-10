@@ -1,17 +1,16 @@
+.ishidden {
+  display: none;
+}
+
 .product-item {
   padding:15px;
   overflow: hidden;
-  border-bottom: 1px solid #bdbdbd;
-  
 }
 
 .prod-info-main {
     margin-bottom: 20px;
     margin-top: 20px;
     background: #fff;
-    border: 1px solid #bdbdbd;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(137, 137, 137, 0.5);
-    box-shadow: 0 1px 1px 0 rgba(137, 137, 137, 0.5);
     overflow: hidden;
 }
 
@@ -23,5 +22,20 @@
     position: relative;
     border: 1px solid #607D8B;
     padding-top: 40px;
+}
+
+.product-name {
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.25em;
+  letter-spacing: 1px;
+  background:#f2f2f2;
+  cursor: pointer;
+}
+
+.product-name p {
+  margin:0;
+  padding: 15px;
 }
 
