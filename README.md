@@ -1,7 +1,7 @@
 # App
 
-> using ng4 v.
-> sample catalog.books.json file found at:
+> using ng4 v.        
+> found sample catalog.books.json file at:
 https://github.com/ozlerhakan/mongodb-json-files/blob/master/datasets/catalog.books.json
 
 
