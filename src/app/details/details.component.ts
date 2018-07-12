@@ -14,7 +14,15 @@ export class DetailsComponent implements OnInit {
   bookObj: any = {
     id: 0,
     title: '',
+    isbn: '',
+    pageCount: '',
+    thumbnailUrl: '',
+    publishedDate: '',
     shortDescription: '',
+    longDescription: '',
+    status: '',
+    authors: '',
+    categories: '',
     image: ''
   };
 

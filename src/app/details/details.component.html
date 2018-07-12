@@ -1,55 +1,34 @@
-<div>
-  <h3>{{bookObj.title}}</h3>
-  <!-- <img [src]="product.image" width="200"> -->
-  <p>{{bookObj.shortDescription}}</p>
-</div>
+<div class="col-md-7 col-sm-12 col-xs-12">
+  <div class="product-detail">
+    <div class="bookhead">
+      <h2 class="title">{{ bookObj.title }}</h2>
+      <h4>author(s): <span>{{ bookObj.authors }}</span></h4> 
+      <img class="bookcover" src="../assets/images/bookcover.jpeg" width="400" height="200" alt="placeholder img" />
+    </div>
+    <!-- endof bookhead -->
 
+    <div class="bookcontainer">
+      <p>id: <span>{{bookObj._id}}</span></p>
+      <p>status: <span>{{ bookObj.status }}</span></p>
+      <p>isbn: <span>{{bookObj.isbn}}</span></p>
+      <p>categories: <span>{{bookObj.categories}}</span></p>
+      <p>page count: <span>{{bookObj.pageCount}}</span></p>
+    </div>
+    <!-- endof bookcontainer   -->
+  
+    <div class="book-long">
+      <p>{{bookObj.longDescription}}</p>
+    </div>
+    <!-- endof book-long -->
 
-
-<!-- <div class="col-md-7 col-sm-12 col-xs-12">
-  <div class="product-deatil">
-    <h5 class="name">
-      <a href="#">
-        Product Code/Name here
-      </a>
-      <a href="#">
-        <span>Product Category</span>
-      </a>
-
-    </h5>
-    <p class="price-container">
-      <span>$199</span>
-    </p>
-    <span class="tag1"></span>
-  </div>
-  <div class="description">
-    <p>A Short product description here </p>
-  </div>
-  <div class="product-info smart-form">
-    <div class="row">
-      <div class="col-md-12">
-        <a href="javascript:void(0);" class="btn btn-danger">Add to cart</a>
-        <a href="javascript:void(0);" class="btn btn-info">More info</a>
-      </div>
-      <div class="col-md-12">
-        <div class="rating">Rating:
-          <label for="stars-rating-5">
-            <i class="fa fa-star text-danger"></i>
-          </label>
-          <label for="stars-rating-4">
-            <i class="fa fa-star text-danger"></i>
-          </label>
-          <label for="stars-rating-3">
-            <i class="fa fa-star text-danger"></i>
-          </label>
-          <label for="stars-rating-2">
-            <i class="fa fa-star text-warning"></i>
-          </label>
-          <label for="stars-rating-1">
-            <i class="fa fa-star text-warning"></i>
-          </label>
+    <div class="book-cart">
+      <div class="row">
+        <div class="col-md-12">
+          <a class="btn btn-primary btn-lg">Add to cart</a>
         </div>
       </div>
     </div>
+    <!-- endof book-cart -->
   </div>
-</div> -->
+  <!-- endof product-detail -->
+</div>
