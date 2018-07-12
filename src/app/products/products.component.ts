@@ -9,10 +9,13 @@ import { ProductsService} from '../products.service';
 })
 
 export class ProductsComponent implements OnInit {
+  
   allProducts: any;
   ishidden: boolean = true;
 
-  constructor(private productsService: ProductsService) {}
+  constructor(private productsService: ProductsService, ) {
+    
+  }
 
   ngOnInit() {
     this.allProducts = this.productsService.getProducts();
@@ -20,15 +23,12 @@ export class ProductsComponent implements OnInit {
   }
 
   onProductName(e) {
-    alert(e.target.textContent) ;
+   console.log(e.target.textContent) ;
   }
 
-  // show(id) {
-  //   this.router.navigate(['details', id, 'Fred', {
-  //     foo: 'foo2',
-  //     me: 'Greg'
-  //   }])
-  // }
+  
+
+  
 
 
 }// ProductsComponent class

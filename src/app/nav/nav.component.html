@@ -16,28 +16,29 @@
         (click)="onClickNavItem($event,navContainer)" 
         #navContainer class="nav navbar-nav">
         <li [class.active]="url">
-          <a routerLink="./" 
+          <a [routerLink]="['./']" 
           routerLinkActive="active">Home</a>
         </li>
         <li>
-          <a routerLink="./register" 
+          <a [routerLink]="['./register']" 
           routerLinkActive="active">Register</a>
         </li>
         <li>
           <a 
-          routerLink="./login" 
+          [routerLink]="['./login']" 
           routerLinkActive="active">Login</a>
         </li>
         <li>
           <a 
-          routerLink="./password-reset" 
+          [routerLink]="['./password-reset']" 
           routerLinkActive="active">Password reset</a>
         </li>
         <li>
-          <a routerLink="./products" routerLinkActive="active">Products</a>
+          <a [routerLink]="['./products']" routerLinkActive="active">Products</a>
         </li>
         <li>
-          <a routerLink="./how-to" routerLinkActive="active">How-to</a>
+          <a [routerLink]="['./how-to']" routerLinkActive="active">How-to</a>
+         
         </li>
        
 

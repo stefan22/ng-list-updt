@@ -2,27 +2,29 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 
-
 @Injectable()
 export class ProductsService {
   products: any;
   allProds: any;
-  url = './assets/data.json';
+  url = './assets/mini.data.json';
   
-  
-
   constructor(private http: HttpClient) { 
 
   }// const
 
 
-  productDetailed(id: string) {
-    for (let i = 0; i < this.products.length; i++) {
-      if (this.products[i].id === id) {
-        return this.products[i];
-      }
+  productsDetails(id) {
+    if(id !== undefined) {
+      for (let i = 0; i < this.allProds.length; i++) {
+        if (this.allProds[i]._id == id) {
+          return this.allProds[i];
+        }
+      }// for
+    }// !undefined
+    else {
+      return true;
     }
-  
+    
   }// productDetailed 
 
 
@@ -39,17 +41,11 @@ export class ProductsService {
             this.allProds.push(item);
           }
       });
-    console.log('allProds: ', this.allProds);
+    // console.log('allProds: ', this.allProds);
     return this.allProds;
       
   }// getProducts
 
   
-
-
-
-
-
-
   
 }// ProductsService class

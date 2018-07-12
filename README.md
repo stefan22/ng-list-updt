@@ -1,6 +1,9 @@
 # App
 
 > using ng4 v.
+> sample catalog.books.json file found at:
+https://github.com/ozlerhakan/mongodb-json-files/blob/master/datasets/catalog.books.json
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 

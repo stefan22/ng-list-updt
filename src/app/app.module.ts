@@ -22,12 +22,9 @@ import { ProductsService } from './products.service';
 
 
 const routes: Routes = [
+  
   {
-    path: 'landing', redirectTo: '', pathMatch: 'full',
-    component: LandingComponent
-  },
-  {
-    path: '',
+    path: '', 
     component: DashboardComponent
   },
   {
@@ -43,10 +40,6 @@ const routes: Routes = [
     component: RegisterComponent
   },
   {
-    path: 'products',
-    component: ProductsComponent
-  },
-  {
     path: 'how-to',
     component: HowToComponent
   },
@@ -58,8 +51,14 @@ const routes: Routes = [
     path: 'details/:id',
     component: DetailsComponent
   },
+  // {
+  //   path: 'landing', redirectTo: '', pathMatch: 'full',
+  //   component: LandingComponent
+  // },
+  
   {
-    path: '**', component: NotFoundComponent
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 

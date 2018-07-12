@@ -1,22 +1,38 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../products.service';
 import { ActivatedRoute } from '@angular/router';
 
-import { ProductsService } from "../products.service";
+
 
 @Component({
-  selector: "app-details",
-  templateUrl: "./details.component.html",
-  styleUrls: ["./details.component.css"]
+  selector: 'app-details',
+  templateUrl: './details.component.html',
+  styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  product: any = { 
-    id: 0, 
-    name: '', 
-    description: '', 
-    image: '' 
+  upp: boolean = true;
+  bookObj: any = {
+    id: 0,
+    title: '',
+    shortDescription: '',
+    image: ''
   };
 
-  constructor(private productServices: ProductsService) {}
+  constructor(
+    private routes: ActivatedRoute,
+    private productsService: ProductsService
+  ) {
 
-  ngOnInit() {}
+    
+  } // constructor
+
+  ngOnInit() {
+    this.routes.params.subscribe(parameters => {
+      const id = parameters['id'];
+      if(id !== undefined) {
+        this.bookObj = this.productsService.productsDetails(id);
+        console.log(this.bookObj);
+      }
+    });
+  }
 }

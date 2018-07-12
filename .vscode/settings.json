@@ -16,7 +16,7 @@
     "typings": true,
     "**/*.map": true,
     ".vscode": false,
-    "README.md": true,
+    "README.md": false,
     "**/*.js": {
       "when": "$(basename).ts"
     }

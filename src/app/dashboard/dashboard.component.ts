@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   isHomePage = "home page";
-
+  upp: boolean = false;
   constructor() {}
 
   ngOnInit() {}
