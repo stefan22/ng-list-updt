@@ -1,13 +1,62 @@
-.bookcover {
-  width: 400px;
-  height: 200px;
-  border:1px solid lightgray;
+.wrapper {
+  min-height: 100vh;
+  display:block;
 }
 
-.bookcover::before {
-  content: "\n image-placeholder";
-  line-height: 200px;
-  vertical-align: middle;
-  font-size: 12px;
-  z-index: 10;
+.product-detail {
+  margin: 1em 0;
+}
+
+.bookhead {
+  display:block;
+  overflow: hidden;
+}
+
+.bookhead h2 {
+  margin-bottom: 1em;
+}
+
+
+.bookcover img {
+  max-width: 375px;
+  width:100%;
+  height: auto;
+}
+
+.booklong p {
+  text-align: justify;
+  width: 100%;
+  margin:0;
+}
+
+.booklong p.bookdesc, .booklong p.bookauthor {
+  margin-top:10px;
+}
+
+.bookcart {
+  margin:1em 0;
+}
+
+
+.bookprop {
+  color:darkred;
+}
+
+@media screen and (max-width: 992px) {
+  .booklong {
+    margin:1.5em 0;
+  }
+  
+  .booklong p {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .bookcover img {
+    max-width: 414px;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+  }
 }

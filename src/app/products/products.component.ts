@@ -11,7 +11,7 @@ import { ProductsService} from '../products.service';
 export class ProductsComponent implements OnInit {
   
   allProducts: any;
-  ishidden: boolean = true;
+  ishidden: boolean = false;
 
   constructor(private productsService: ProductsService, ) {
     

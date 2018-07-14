@@ -5,42 +5,43 @@ import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
-  selector: 'app-details',
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css']
+  selector: "app-details",
+  templateUrl: "./details.component.html",
+  styleUrls: ["./details.component.css"]
 })
 export class DetailsComponent implements OnInit {
   upp: boolean = true;
   bookObj: any = {
     id: 0,
-    title: '',
-    isbn: '',
-    pageCount: '',
-    thumbnailUrl: '',
-    publishedDate: '',
-    shortDescription: '',
-    longDescription: '',
-    status: '',
-    authors: '',
-    categories: '',
-    image: ''
+    title: "",
+    isbn: "",
+    pageCount: "",
+    thumbnailUrl: "",
+    publishedDate: "",
+    shortDescription: "",
+    longDescription: "",
+    status: "",
+    authors: "",
+    categories: "",
+    image: ""
   };
 
   constructor(
     private routes: ActivatedRoute,
     private productsService: ProductsService
-  ) {
-
-    
-  } // constructor
+  ) {} // constructor
 
   ngOnInit() {
     this.routes.params.subscribe(parameters => {
-      const id = parameters['id'];
-      if(id !== undefined) {
+      const id = parameters["id"];
+      if (id !== undefined) {
         this.bookObj = this.productsService.productsDetails(id);
         console.log(this.bookObj);
       }
     });
+  }
+
+  onAddToCart() {
+    alert('please don\'t do that again');
   }
 }

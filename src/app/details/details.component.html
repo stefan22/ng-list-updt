@@ -1,34 +1,62 @@
-<div class="col-md-7 col-sm-12 col-xs-12">
-  <div class="product-detail">
-    <div class="bookhead">
-      <h2 class="title">{{ bookObj.title }}</h2>
-      <h4>author(s): <span>{{ bookObj.authors }}</span></h4> 
-      <img class="bookcover" src="../assets/images/bookcover.jpeg" width="400" height="200" alt="placeholder img" />
-    </div>
-    <!-- endof bookhead -->
-
-    <div class="bookcontainer">
-      <p>id: <span>{{bookObj._id}}</span></p>
-      <p>status: <span>{{ bookObj.status }}</span></p>
-      <p>isbn: <span>{{bookObj.isbn}}</span></p>
-      <p>categories: <span>{{bookObj.categories}}</span></p>
-      <p>page count: <span>{{bookObj.pageCount}}</span></p>
-    </div>
-    <!-- endof bookcontainer   -->
-  
-    <div class="book-long">
-      <p>{{bookObj.longDescription}}</p>
-    </div>
-    <!-- endof book-long -->
-
-    <div class="book-cart">
-      <div class="row">
-        <div class="col-md-12">
-          <a class="btn btn-primary btn-lg">Add to cart</a>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="wrapper">
+      <div class="col-md-12 col-xs-12">
+        <h2>Book details</h2>
       </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="product-detail">
+          <div class="row">
+
+            <div class="row">
+              <div class="bookhead col-lg-12 col-md-12 col-xs-12">
+                <h2 class="title">{{ bookObj.title }}</h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="bookcover col-lg-4 col-md-5 col-xs-12">
+                <img src="../../assets/{{bookObj.thumbnailUrl}}" width="435" height="560" alt="placeholder img" />
+              </div>
+              
+              <div class="booklong col-lg-7 col-md-7 col-xs-12">
+                <p><span class="bookprop">id:</span>
+                {{bookObj._id}}
+                </p>
+                <p><span class="bookprop">status:</span>
+                  {{ bookObj.status }}
+                </p>
+                <p><span class="bookprop">isbn:</span>
+                  {{bookObj.isbn}}
+                </p>
+                <p><span class="bookprop">categories:</span>
+                {{bookObj.categories}}
+                </p>
+                <p><span class="bookprop">page count:</span>
+                  {{bookObj.pageCount}}
+                </p>
+                <p class="bookdesc"><span class="bookprop">description:</span>
+                  {{bookObj.longDescription}}</p>
+                <p class="bookauthor"><span class="bookprop">author(s):</span>
+                  {{ bookObj.authors }}
+                </p>
+              </div>
+              <!-- endof book-long -->
+            </div>
+            
+            <div class="row">
+              <div class="bookcart col-lg-12 col-md-12 col-xs-12">
+                  <a class="btn btn-primary btn-lg" (click)="onAddToCart($event)">Add to cart</a>
+              </div>
+              <!-- endof book-cart -->
+            </div>
+
+          </div>
+        </div>
+        <!-- endof product-detail -->
+      </div>
+
     </div>
-    <!-- endof book-cart -->
   </div>
-  <!-- endof product-detail -->
+
 </div>
