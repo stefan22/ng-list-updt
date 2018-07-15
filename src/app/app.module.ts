@@ -1,5 +1,5 @@
+import { NgModule } from "@angular/core";
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { RouterModule, Routes } from '@angular/router';
 
@@ -21,7 +21,7 @@ import { HowToComponent } from './how-to/how-to.component';
 import { ProductsService } from './products.service';
 
 
-const routes: Routes = [
+const appRoutes: Routes = [
   
   {
     path: '', 
@@ -30,11 +30,21 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+    // children: [
+    //   { path: 'password-reset', component: PasswordResetComponent }
+    // ]
   },
+
   {
     path: 'password-reset',
     component: PasswordResetComponent
+    
+  },{
+    path: 'password-reset',
+    component: PasswordResetComponent
+    
   },
+  
   {
     path: 'register',
     component: RegisterComponent
@@ -51,10 +61,6 @@ const routes: Routes = [
     path: 'details/:id',
     component: DetailsComponent
   },
-  // {
-  //   path: 'landing', redirectTo: '', pathMatch: 'full',
-  //   component: LandingComponent
-  // },
   
   {
     path: '**',
@@ -77,10 +83,12 @@ const routes: Routes = [
     DetailsComponent,
     HowToComponent
   ],
-  imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(routes)],
-  exports: [
-    //RouterModule
+  imports: [
+    BrowserModule, 
+    HttpClientModule, 
+    RouterModule.forRoot(appRoutes)
   ],
+  
   providers: [ProductsService],
   bootstrap: [AppComponent]
 })
