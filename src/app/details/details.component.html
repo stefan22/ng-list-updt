@@ -6,14 +6,11 @@
       </div>
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="product-detail">
-          <div class="row">
-
             <div class="row">
               <div class="bookhead col-lg-12 col-md-12 col-xs-12">
                 <h2 class="title">{{ bookObj.title }}</h2>
               </div>
             </div>
-
             <div class="row">
               <div class="bookcover col-lg-4 col-md-5 col-xs-12">
                 <img src="../../assets/{{bookObj.thumbnailUrl}}" width="435" height="560" alt="placeholder img" />
@@ -43,15 +40,12 @@
               </div>
               <!-- endof book-long -->
             </div>
-            
             <div class="row">
               <div class="bookcart col-lg-12 col-md-12 col-xs-12">
                   <a class="btn btn-primary btn-lg" (click)="onAddToCart($event)">Add to cart</a>
               </div>
               <!-- endof book-cart -->
             </div>
-
-          </div>
         </div>
         <!-- endof product-detail -->
       </div>
