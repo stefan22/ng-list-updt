@@ -7,15 +7,11 @@ import { ProductsService} from '../products.service';
   templateUrl: "./products.component.html",
   styleUrls: ["./products.component.css"]
 })
-
 export class ProductsComponent implements OnInit {
-  
   allProducts: any;
   ishidden: boolean = false;
 
-  constructor(private productsService: ProductsService, ) {
-    
-  }
+  constructor(private productsService: ProductsService) {}
 
   ngOnInit() {
     this.allProducts = this.productsService.getProducts();
@@ -23,13 +19,8 @@ export class ProductsComponent implements OnInit {
   }
 
   onProductName(e) {
-   console.log(e.target.textContent) ;
+    console.log(e.target.textContent);
   }
 
-
-  
-
-  
-
-
+  onProductImage(e) {}
 }// ProductsComponent class

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ["./dashboard.component.css"]
 })
 export class DashboardComponent implements OnInit {
-  isHomePage = "home page";
+  isHomePage = "jumbo hm";
   upp: boolean = false;
   constructor() {}
 

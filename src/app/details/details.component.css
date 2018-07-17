@@ -42,6 +42,24 @@
   color:darkred;
 }
 
+.details-image {
+  animation-duration: .5s;
+  animation-delay: .075s;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-delay: .075s;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-duration: .5s;
+  -moz-animation-delay: .075s;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-duration: .5s;
+  -ms-animation-delay: .075s;
+  -ms-animation-iteration-count: 1;
+} 
+
+
+
+
 @media screen and (max-width: 992px) {
   .booklong {
     margin:1.5em 0;

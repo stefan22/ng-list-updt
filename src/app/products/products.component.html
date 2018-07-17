@@ -8,7 +8,8 @@
         <div class="product-item clearfix col-lg-6 col-md-12 col-sm-12 
                col-xs-12" *ngFor="let product of allProducts">
           <a class="cover pull-left" [routerLink]="['/details', product._id]">
-            <div class="product-image">
+            <div class="product-image animated fadeInDownBig"
+              (click)="onProductImage($event)">
               <img src="../../assets/{{product.thumbnailUrl}}" class="img-responsive" width="150" height="193" alt="placeholder" />
             </div>
           </a>

@@ -21,6 +21,7 @@ import { HowToComponent } from './how-to/how-to.component';
 import { ProductsService } from './products.service';
 
 
+
 const appRoutes: Routes = [
   
   {
@@ -82,6 +83,7 @@ const appRoutes: Routes = [
     ProductsComponent,
     DetailsComponent,
     HowToComponent
+   
   ],
   imports: [
     BrowserModule, 
