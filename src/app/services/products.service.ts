@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProductsService {
   products: any;
   allProds: any;
-  url = './assets/mini.data.json';
+  url = '../assets/mini.data.json';
   
   constructor(private http: HttpClient) { 
 

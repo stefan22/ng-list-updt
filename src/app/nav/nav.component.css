@@ -1,3 +1,13 @@
 a.navbar-brand {
   cursor: pointer;
 }
+
+li.rightnav {
+  float:right;
+  width: 100px;
+}
+
+li.rightnav a {
+  padding: 15px 0;
+  line-height: 20px;
+}

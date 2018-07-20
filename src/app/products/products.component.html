@@ -13,8 +13,8 @@
               <img src="../../assets/{{product.thumbnailUrl}}" class="img-responsive" width="150" height="193" alt="placeholder" />
             </div>
           </a>
-          <div class="row">
-            <div class="pull-left col-lg-8 col-md-9 col-sm-9 col-xs-12">
+          <!-- <div class="row"> -->
+            <div class="pull-left padding-right0 col-lg-8 col-md-9 col-sm-9 col-xs-12">
               <div class="product-name" *ngIf="product._id">
                 <a [routerLink]="['/details', product._id]">
                   {{product.title}}
@@ -22,7 +22,7 @@
                 <p>{{product.shortDescription}}</p>
               </div>
             </div>
-          </div>
+          <!-- </div> -->
         </div>
         <!-- product-item -->
       </div>

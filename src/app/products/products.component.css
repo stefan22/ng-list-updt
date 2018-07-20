@@ -25,9 +25,14 @@
   width: 100%;
 }
 
+.pull-left.padding-right0 {
+  padding-right: 0;
+}
+
 .product-name {
   padding: 0;
   overflow: hidden;
+  margin-left:0;
   width: 100%;
 }
 
@@ -40,7 +45,7 @@
 
 .product-name p {
   margin: 0;
-  width: 98%;
+  width: 100%;
   padding: 0;
   font-size: 0.9em;
   text-align: justify;

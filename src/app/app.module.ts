@@ -18,7 +18,8 @@ import { DetailsComponent } from './details/details.component';
 
 import { HowToComponent } from './how-to/how-to.component';
 
-import { ProductsService } from './products.service';
+import { ProductsService } from './services/products.service';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -62,6 +63,12 @@ const appRoutes: Routes = [
     path: 'details/:id',
     component: DetailsComponent
   },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [],
+    children: []
+  },
   
   {
     path: '**',
@@ -82,7 +89,8 @@ const appRoutes: Routes = [
     LandingComponent,
     ProductsComponent,
     DetailsComponent,
-    HowToComponent
+    HowToComponent,
+    AdminComponent
    
   ],
   imports: [
