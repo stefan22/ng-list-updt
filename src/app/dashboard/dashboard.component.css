@@ -1,0 +1,16 @@
+.jumbotron {
+  min-height: 40vh;
+  margin-bottom: 60px;
+}
+
+.book-subtitle {
+  color:#2e6da4;
+}
+
+.learnmore a {
+  text-decoration: none;
+}
+
+.margin-top60 {
+  margin-top:60px;
+}
