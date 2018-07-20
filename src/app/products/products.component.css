@@ -16,18 +16,7 @@
 
 .product-image {
   max-width: 150px;
-  animation-duration: .4s;
-  animation-delay: .025s;
-  animation-iteration-count: 1;
-  -webkit-animation-duration: .4s;
-  -webkit-animation-delay: .025s;
-  -webkit-animation-iteration-count: 1;
-  -moz-animation-duration: .4s;
-  -moz-animation-delay: .025s;
-  -moz-animation-iteration-count: 1;
-  -ms-animation-duration: .4s;
-  -ms-animation-delay: .025s;
-  -ms-animation-iteration-count: 1;
+  
 }
 
 
