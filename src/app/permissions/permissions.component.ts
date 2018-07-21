@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-permissions',
-  templateUrl: './permissions.component.html',
-  styleUrls: ['./permissions.component.css']
+  selector: "app-permissions",
+  templateUrl: "./permissions.component.html",
+  styleUrls: ["./permissions.component.css"]
 })
 export class PermissionsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  editSaved() {
+    return window.confirm("Save Changes?");
   }
 
-}
+
+
+}// PermissionsComponent class

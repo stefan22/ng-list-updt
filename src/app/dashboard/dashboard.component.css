@@ -1,6 +1,6 @@
 .jumbotron {
   min-height: 40vh;
-  margin-bottom: 60px;
+  margin-bottom:40px;
 }
 
 .book-subtitle {
@@ -13,4 +13,10 @@
 
 .margin-top60 {
   margin-top:60px;
+}
+
+@media screen and (max-width:768px) {
+  .jumbotron {
+    margin-bottom: 20px;
+  }
 }

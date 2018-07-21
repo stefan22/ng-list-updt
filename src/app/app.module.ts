@@ -8,22 +8,25 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HowToComponent } from './how-to/how-to.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 
 import { LandingComponent } from './landing/landing.component';
 import { NotFoundComponent } from './404/404.component';
 
 import { ProductsComponent } from './products/products.component';
+import { AddProductComponent } from './add-product/add-product.component';
 import { DetailsComponent } from './details/details.component';
 
-import { HowToComponent } from './how-to/how-to.component';
-
 import { ProductsService } from './services/products.service';
-import { AdminComponent } from './admin/admin.component';
 import { LoggedInGuard } from './services/logged-in.guard';
+import { PerSavedGuard } from './services/per-saved.guard';
+
+import { AdminComponent } from './admin/admin.component';
 import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { PermissionsComponent } from './permissions/permissions.component';
+
 
 
 
@@ -71,16 +74,22 @@ const appRoutes: Routes = [
     canActivate: [LoggedInGuard],
     children: [
       {
-        path: '', component: UsersComponent
+        path: 'admin',
+        component: UsersComponent
+      },
+     
+      {
+        path: 'add-user',
+        component: AddUserComponent
       },
       {
-        path: 'user-list', component: UsersComponent
+        path:'add-product',
+        component: AddProductComponent
       },
       {
-        path: 'add-user', component: AddUserComponent
-      },
-      {
-        path: 'permissions', component: PermissionsComponent
+        path: 'permissions',
+        component: PermissionsComponent,
+        canDeactivate: [PerSavedGuard]
       }
     ]
   },
@@ -108,11 +117,12 @@ const appRoutes: Routes = [
     AdminComponent,
     UsersComponent,
     AddUserComponent,
-    PermissionsComponent
+    PermissionsComponent,
+    AddProductComponent
   ],
   imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(appRoutes)],
 
-  providers: [ProductsService, LoggedInGuard],
+  providers: [ProductsService, LoggedInGuard, PerSavedGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,3 +1,140 @@
-<p>
-  admin works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">Admin Component</h1>
+    </div>
+
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <h1>
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
+              <small>add/edit pages, products and users</small>
+            </h1>
+          </div>
+          <div class="col-md-2">
+            <div class="dropdown">
+              <button class="create-content btn btn-primary btn-default dropdown-toggle" type="button" data-toggle="dropdown">Admin Edits
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a [routerLink]="['./add-user']" href="#">Add User</a>
+                </li>
+                <li>
+                  <a [routerLink]="['./add-product']" href="#">Add Product</a>
+                </li>
+                <li>
+                  <a [routerLink]="['./permissions']" class="is-guarded" href="#">Edit Permissions</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <br>
+
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="list-group">
+              <a href="index.html" class="list-group-item active main-color-bg">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                Dashboard
+                <span class="badge">12</span>
+              </a>
+              <a href="pages.html" class="list-group-item">
+                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages
+                <span class="badge">25</span>
+              </a>
+              <a href="posts.html" class="list-group-item">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Products
+                <span class="badge">126</span>
+              </a>
+              <a href="users.html" class="list-group-item">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users
+                <span class="badge">12</span>
+              </a>
+            </div>
+
+            <div class="alert alert-success">
+              <h4>This week's visitors</h4>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 60%;">
+                  60
+                </div>
+              </div>
+              <h4>Today's unique visitors
+              </h4>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 18%;">
+                  18
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-9">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Stats</h3>
+              </div>
+              <div class="panel-body">
+                <div class="col-md-3">
+                  <div class="well dash-box">
+                    <h2>
+                      <span class="glyphicon glyphicon-user" aria-hidden="true"></span> 12</h2>
+                    <h4>Users</h4>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="well dash-box">
+                    <h2>
+                      <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> 25</h2>
+                    <h4>Pages</h4>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="well dash-box">
+                    <h2>
+                      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>126</h2>
+                    <h4>Products</h4>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="well dash-box">
+                    <h2>
+                      <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 2129</h2>
+                    <h4>Visitors</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+           <app-users></app-users>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- endof main -->
+
+
+    <router-outlet></router-outlet>
+
+   
+
+
+  </div>
+
+
+
+
+</div>

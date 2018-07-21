@@ -1,0 +1,23 @@
+
+.create-content.btn.btn-primary {
+  margin-top:35px;
+}
+
+small {
+  font-size: 50%;
+}
+
+.users-table.table tr {
+  cursor: pointer;
+}
+
+.dropdown {
+  float:right;
+}
+
+.is-guarded {
+  color: #c14c4c;
+}
+.is-guarded:hover {
+  color:#ff4003;
+}
