@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, CanDeactivate } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { PermissionsComponent } from '../permissions/permissions.component';
+import { PermissionsComponent } from '../admin/permissions/permissions.component';
 
 @Injectable()
 export class PerSavedGuard implements 
