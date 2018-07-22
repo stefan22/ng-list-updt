@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminModule } from './admin/admin.module';
@@ -65,7 +65,6 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule, 
-    ReactiveFormsModule,
     HttpClientModule, 
     AdminModule,
     LoginModule,
