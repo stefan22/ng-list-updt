@@ -1,0 +1,60 @@
+.add-user-input {
+  float:right;
+  padding: 5px 26px;
+}
+
+.well.well-add-user {
+  padding:0;
+  background-color: #337ab7;
+  border-color: #dddddd;
+}
+
+.add-input-wrap {
+  background-color:#fff;
+  padding:20px 0;
+}
+
+.add-input-group {
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.well.well-add-user label {
+    padding: 0;
+    padding-top: 7px;
+    text-align: left;
+}
+
+.add-user-title {
+  color: #fff;
+}
+
+span.glyphicon.glyphicon-user {
+  margin-left:15px;
+}
+
+.add-user-title h4 {
+  padding: 0 5px;
+  margin:14px 0;
+  font-size: 14px;
+  text-align: left;
+  display: inline-block;
+  font-weight: 400;
+}
+
+.last-add-user {
+  margin-top:20px;
+}
+
+.last-add-user .row > div {
+  padding:0;
+}
+
+.last-add-user .add-user-button {
+  float: right;
+}
+
+
+
+
+

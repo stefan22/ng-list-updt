@@ -16,21 +16,16 @@
         <td>jimmy@goodfellas.com</td>
         <td>read, write</td>
       </tr>
-      <tr>
-        <td>James Hetfield</td>
-        <td>james@metallica.com</td>
-        <td>read</td>
+      
+      <tr *ngFor="let user of allUsers">
+        <td>{{ user.userName }}</td>
+        <td>{{ user.userEmail }}</td>
+        <td>{{ user.userPrivileges.read }}</td>
       </tr>
-      <tr>
-        <td>Eric Cartman</td>
-        <td>eric@southPark.com</td>
-        <td>read</td>
-      </tr>
-      <tr>
-        <td>Tupac Shakur</td>
-        <td>tupac@shotFivetimes.com</td>
-        <td>read</td>
-      </tr>
+  
     </table>
+
+      
+
   </div>
 </div>

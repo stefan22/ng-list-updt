@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, FormArray } from '@angular/forms';
+import { UsersService } from '../../services/users.service';
+
 
 @Component({
   selector: "app-add-user",
@@ -7,14 +9,17 @@ import { FormGroup, FormBuilder, FormControl, FormArray } from '@angular/forms';
   styleUrls: ["./add-user.component.css"]
 })
 export class AddUserComponent implements OnInit {
-  addUserForm: FormGroup;
-  userPriviCtrls: FormArray;
+  allUsers: any = [];
 
-  constructor(private formBuilder: FormBuilder) {
+  addUserForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder, private users: UsersService) {
     this.buildUserForm();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
   buildUserForm() {
     this.addUserForm = this.formBuilder.group({
@@ -24,31 +29,23 @@ export class AddUserComponent implements OnInit {
       userPrivileges: this.formBuilder.group({
         read: this.formBuilder.control("read"),
         write: this.formBuilder.control(null)
-      }),
-      userPrivilegesArray: this.formBuilder.array([
-        this.formBuilder.control(null)
-      ])
+      })
     });
-
-    this.userPriviCtrls = this.addUserForm.get(
-      "userPrivilegesArray"
-    ) as FormArray;
   } // buildForm
 
-  onUserAddPrivileges() {
-    this.userPriviCtrls.push(this.formBuilder.control(null));
-  }
-
-  onUserRemPrivileges(index) {
-    this.userPriviCtrls.removeAt(index);
-  }
-
-  onUserReset() {
-    this.addUserForm.reset();
-  }
-
   onAddUserSubmit() {
+    let user = {};
+    user = this.addUserForm.value;
+    this.users.addUser(user);
     
-    console.log(this.addUserForm.value);
-  }
+    
+
+  } // onAddUserSubmit
+
+
+
+
+
+
+
 }// AddUserComponent

@@ -10,6 +10,7 @@ import { PermissionsComponent } from './permissions/permissions.component';
 
 import { LoggedInGuard } from "../services/logged-in.guard";
 import { PerSavedGuard } from "../services/per-saved.guard";
+import { UsersService } from '../services/users.service';
 
 import { ReactiveFormsModule } from "@angular/forms";
 
@@ -54,7 +55,6 @@ const adminRoutes: Routes = [
     AddUserComponent,
     PermissionsComponent,
     AddProductComponent
-   
   ],
   imports: [
     CommonModule,
@@ -63,7 +63,9 @@ const adminRoutes: Routes = [
   ],
   providers: [
     LoggedInGuard, 
-    PerSavedGuard
+    PerSavedGuard, 
+    UsersService
+  
   ]
 })
 export class AdminModule {}

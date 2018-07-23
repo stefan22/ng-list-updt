@@ -3,7 +3,7 @@
   margin:0;
 }
 
-.permissions i {
+.permissions i, p i {
   margin-right: 5px;
   display: inline-block;
   margin-bottom: 15px;
@@ -22,7 +22,9 @@
 }
 
 .permissions-title h3 {
-  margin-top:15px;
+  font-size: 16px;
+  display: inline-block;
+  margin: 10px 0 0 0;
 }
 
 .media-user.media-left {
@@ -35,11 +37,35 @@
 }
 
 input.input-permissions {
-  margin: 37px 0 0px;
-  padding: 7px 8px;
+    margin-top: 0;
+    width: 15%;
+    margin-top:-1px;
+    height: 24px;
+    padding: 0;
+    font-size: 14px;
+ 
 }
+
+.default-permission {
+  border-bottom:1px dashed lightgray;
+  padding-bottom: 7px;
+}
+
+.checkbox label {
+  margin-top:10px;
+}
+
 
 #ispermission {
   margin-top:14px;
   padding:7px 20px;
 }
+
+
+
+
+
+
+
+
+
