@@ -10,6 +10,7 @@ import { UsersService } from '../../services/users.service';
 })
 export class AddUserComponent implements OnInit {
   allUsers: any = [];
+  
 
   addUserForm: FormGroup;
 

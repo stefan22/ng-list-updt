@@ -1,10 +1,10 @@
 
 .create-content.btn.btn-primary {
-  margin-top:35px;
+  margin-top:33px;
 }
 
 small {
-  font-size: 50%;
+  font-size: 42%;
 }
 
 .users-table.table tr {
@@ -20,4 +20,12 @@ small {
 }
 .is-guarded:hover {
   color:#ff4003;
+}
+
+.btn-group.reach-buttons {
+  margin-left:1em;
+}
+
+button:focus {
+  outline:none !important;
 }

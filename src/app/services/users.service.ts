@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 
 
+
 @Injectable()
 export class UsersService {
   allUsers: any = [];
- 
-
-  constructor() {}
-
   
+ 
+  constructor() {
+   
+  }
+
+
 
   // onUserReset() {
   //   this.addUserForm.reset();
@@ -23,18 +26,21 @@ export class UsersService {
 
   // } // onAddUserSubmit
 
+
   addUser(user) {
     user = user || {};
-    console.log(user);
     this.allUsers.push(user);
-    console.log(this.allUsers);
+    //console.log(this.allUsers);
+    return this.allUsers;
   }
 
   
   getAllUsers() {
-    console.log(this.allUsers);
+    //console.log(this.allUsers);
     return this.allUsers;
   }
+
+
 
 
 
